@@ -1,0 +1,116 @@
+:root {
+  --bg: #0b1020;
+  --panel: #121a2b;
+  --panel-alt: #1a2644;
+  --primary: #64d2ff;
+  --accent: #7ef7c8;
+  --text: #edf5ff;
+  --muted: #a7b5d1;
+  --danger: #ff7d7d;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, var(--bg), #111827);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent);
+  font-size: 12px;
+}
+
+h1 {
+  margin: 6px 0 0;
+  font-size: 42px;
+}
+
+.status-box {
+  background: rgba(100, 210, 255, 0.12);
+  border: 1px solid rgba(100, 210, 255, 0.4);
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 999px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: rgba(18, 26, 43, 0.96);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.full-width {
+  margin-top: 20px;
+}
+
+form {
+  display: grid;
+  gap: 12px;
+}
+
+input, button {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  padding: 12px 14px;
+  font-size: 15px;
+}
+
+input {
+  background: var(--panel-alt);
+  border-color: rgba(255,255,255,0.08);
+  color: var(--text);
+}
+
+button {
+  background: linear-gradient(135deg, var(--primary), #2c7ef2);
+  color: #08111d;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: linear-gradient(135deg, var(--accent), #67d1a0);
+}
+
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: rgba(8, 17, 29, 0.7);
+  border-radius: 10px;
+  padding: 12px;
+  color: var(--muted);
+  min-height: 48px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 22px;
+}

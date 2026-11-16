@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Wallet Demo</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Demo</p>
+          <h1>E-Wallet</h1>
+        </div>
+        <div class="status-box" id="statusBox">Frontend ready</div>
+      </header>
+
+      <main class="grid">
+        <section class="card">
+          <h2>1. Register user</h2>
+          <form id="registerForm">
+            <input name="name" placeholder="Full name" value="Jane Doe" required />
+            <input name="email" type="email" placeholder="Email" value="jane@example.com" required />
+            <input name="mobile_number" placeholder="Mobile number" value="08012345678" required />
+            <input name="date_of_birth" type="date" value="1998-05-12" required />
+            <input name="password" type="password" placeholder="Password" value="StrongPass123!" required />
+            <input name="identification_type" placeholder="ID type" value="NATIONAL_ID" required />
+            <input name="identification_value" placeholder="ID value" value="AB12345678" required />
+            <button type="submit">Register</button>
+          </form>
+        </section>
+
+        <section class="card">
+          <h2>2. Validate OTP</h2>
+          <form id="otpForm">
+            <input name="email" type="email" placeholder="Email" value="jane@example.com" required />
+            <input name="otp" placeholder="OTP" value="123456" required />
+            <button type="submit">Verify OTP</button>
+          </form>
+        </section>
+
+        <section class="card">
+          <h2>3. Login</h2>
+          <form id="loginForm">
+            <input name="mobile_number" placeholder="Mobile number" value="08012345678" required />
+            <input name="password" type="password" placeholder="Password" value="StrongPass123!" required />
+            <button type="submit">Login</button>
+          </form>
+        </section>
+
+        <section class="card">
+          <h2>4. Wallet</h2>
+          <button id="balanceBtn" class="secondary">Get balance</button>
+          <pre id="balanceOutput">No balance loaded yet.</pre>
+        </section>
+
+        <section class="card">
+          <h2>5. Send money</h2>
+          <form id="transferForm">
+            <input name="receiver_mobile_number" placeholder="Receiver mobile" value="08000000001" required />
+            <input name="amount" type="number" step="0.01" value="25.50" required />
+            <input name="purpose" placeholder="Purpose" value="Lunch" required />
+            <button type="submit">Send transfer</button>
+          </form>
+        </section>
+      </main>
+
+      <section class="card full-width">
+        <h2>API response</h2>
+        <pre id="responseOutput">Waiting for action...</pre>
+      </section>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
